@@ -1,15 +1,17 @@
 import './Style.css'
-import Home from './screens/Home'
+import Header from './components/Header'
 import Loading from './screens/Loading'
 import Question from './screens/Question'
 import Results from './screens/Results'
+import Start from './screens/Start'
 
 function App() {
 
   return (
     <div>
       On Frontend Challenge
-      <Home />
+      <Header />
+      <Start />
       <Question />
       <Results />
       <Loading />

@@ -1,4 +1,4 @@
-function Home () {
+function Start () {
     return (
         <div>
             <div className="home-info">
@@ -13,4 +13,4 @@ function Home () {
     )
 }
 
-export default Home
+export default Start
