@@ -1,5 +1,6 @@
 import './Style.css'
 import Home from './screens/Home'
+import Loading from './screens/Loading'
 import Question from './screens/Question'
 import Results from './screens/Results'
 
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Question />
       <Results />
+      <Loading />
     </div>
   )
 }
