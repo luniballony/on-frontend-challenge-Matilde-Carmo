@@ -1,20 +1,23 @@
 import './Style.css'
 import Header from './components/Header'
-import Loading from './screens/Loading'
 import Question from './screens/Question'
-import Results from './screens/Results'
 import Start from './screens/Start'
+import useQuiz from './hooks/useQuiz'
 
 function App() {
 
+  const {questionId} = useQuiz();
+
+  
   return (
     <div>
-      On Frontend Challenge
       <Header />
+      
       <Start />
-      <Question />
-      <Results />
-      <Loading />
+
+      <Question key = {questionId} questionId = {questionId} />
+
+      
     </div>
   )
 }
