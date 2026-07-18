@@ -1,19 +1,7 @@
-import useQuiz from "../hooks/useQuiz"
 import data from "../data/data.json"
-import { useEffect } from "react";
 
-function Question ({ questionId }) {
-
-    const {handleAnswer, shoeScore} = useQuiz();
-
-    function handleClick (answerPicked) {
-        handleAnswer(answerPicked);
-    }
-
-    // temporary to track changes
-    useEffect (() => {
-        console.log(shoeScore);
-    }, [shoeScore])
+function Question ({ questionId , handleAnswer}) {
+    const question = data.questions[questionId];
     
     return(
         <div>
@@ -22,13 +10,13 @@ function Question ({ questionId }) {
                 <h3>30 DAYS RISK FREE</h3>
             </div>
             <div>
-                <p>{data.questions[questionId].copy}</p>
+                <p>{question.copy}</p>
                 <div>
-                    <button onClick={() => handleClick(0)}
-                        >{data.questions[questionId].answers[0].copy}</button>
+                    <button onClick={() => handleAnswer(0)}
+                        >{question.answers[0].copy}</button>
 
-                    <button onClick={() => handleClick(1)}
-                        >{data.questions[questionId].answers[1].copy}</button>
+                    <button onClick={() => handleAnswer(1)}
+                        >{question.answers[1].copy}</button>
                 </div>
             </div>
         </div>

@@ -3,10 +3,17 @@ import Header from './components/Header'
 import Question from './screens/Question'
 import Start from './screens/Start'
 import useQuiz from './hooks/useQuiz'
+import Results from './screens/Results'
 
 function App() {
 
-  const {questionId} = useQuiz();
+  const {phase, questionId, handleAnswer} = useQuiz();
+
+
+  if(phase === 'start') return <Start />
+  if(phase === 'quiz') return (
+    <Question key = {questionId} questionId = {questionId} handleAnswer = {handleAnswer}  />
+  )
 
   
   return (
@@ -15,7 +22,7 @@ function App() {
       
       <Start />
 
-      <Question key = {questionId} questionId = {questionId} />
+      <Results />
 
       
     </div>

@@ -4,10 +4,10 @@ import data from "../data/data.json"
 function useQuiz () {
 
     // responsible to track users position: start / quiz / results
-    const [phase, setPhase] = useState('start');
+    const [phase, setPhase] = useState('quiz');
 
     // tracks the current question Id
-    const [questionId, setQuestionId] = useState(1);
+    const [questionId, setQuestionId] = useState(0);
 
     const [shoeScore, setShoeScore] = useState(data.shoes);
 
@@ -17,6 +17,12 @@ function useQuiz () {
 
         // array based on the answer picked 
         const currentPick = data.questions[questionId].answers[pick];
+
+        if (currentPick.nextQuestion === '') {
+            console.log('#### TEST HAS ENDED ######'); // temporary
+            setPhase('results');
+            return;
+        }
 
         setQuestionId(currentPick.nextQuestion);
 
