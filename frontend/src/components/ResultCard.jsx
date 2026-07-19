@@ -1,13 +1,16 @@
-function ResultCard () {
+function ResultCard ({highestScore}) {
+
+    console.log("test in resultsCard: ")
+    console.log(highestScore);
     return (
         <div>
             <img src="shoes/Cloud.png" alt="TEST SHOE RESULT" />
             <div className="result-info"> 
-                <p>SHOE NAME</p>
+                <p>{}</p>
                 <p>SHOE DESCRIPTION</p>
                 <div className="result-price-shade">    
                     <p>200 CHF</p>
-                    <p>TEMPORARY SHADE NAME</p>
+                    <p>{}</p>
                 </div>
                 <p>SHADES</p>
             </div>

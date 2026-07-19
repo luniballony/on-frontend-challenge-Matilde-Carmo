@@ -13,6 +13,7 @@ function useQuiz () {
 
     function startQuiz () {
         setPhase('quiz');
+        setQuestionId(0); // in case its called in Results
     }
 
     // when a user picks an answer, we call this function
@@ -39,9 +40,12 @@ function useQuiz () {
         );
         
     }
-      
 
-    return {phase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer}
+
+    return {phase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer
+
+        
+    }
 }
 
 export default useQuiz

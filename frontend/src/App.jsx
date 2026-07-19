@@ -7,10 +7,11 @@ import Results from './screens/Results'
 
 function App() {
 
-  const {phase, questionId, handleAnswer, startQuiz} = useQuiz();
+  const {phase, questionId, handleAnswer, startQuiz, shoeScore} = useQuiz();
 
 
-  if(phase === 'start') return <Start startQuiz = {startQuiz} />
+  if(phase === 'start') return (
+    <Start startQuiz = {startQuiz} />)
   if(phase === 'quiz') return (
     <Question key = {questionId} questionId = {questionId} handleAnswer = {handleAnswer}  />
   )
@@ -19,7 +20,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Results />
+      <Results startQuiz = {startQuiz} shoeScore = { shoeScore} />
 
       
     </div>
