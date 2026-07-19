@@ -12,9 +12,19 @@ function useQuiz () {
     const [shoeScore, setShoeScore] = useState(data.shoes);
 
     function startQuiz () {
+        console.log("Starting Quiz...")
         setPhase('quiz');
         setQuestionId(0); // in case its called in Results
+        
+        setShoeScore(prevShoes =>
+            prevShoes.map(item => ({
+                ...item,
+                rating: 0
+            }))
+        );
     }
+
+
 
     // when a user picks an answer, we call this function
     // this function should be responsible for updating score, questionId and phases
@@ -23,14 +33,6 @@ function useQuiz () {
         // array based on the answer picked 
         const currentPick = data.questions[questionId].answers[pick];
 
-        if (currentPick.nextQuestion === '') {
-            console.log('#### TEST HAS ENDED ######'); // temporary
-            setPhase('results');
-            return;
-        }
-
-        setQuestionId(currentPick.nextQuestion);
-
         // updates shoes score based on the answer picked
         setShoeScore(prevShoes =>
             prevShoes.map(item => ({
@@ -38,7 +40,13 @@ function useQuiz () {
                 rating: item.rating + currentPick.ratingIncrease[item.id]
             }))
         );
-        
+
+
+        if (currentPick.nextQuestion === '') {
+            setPhase('results');
+        } else {
+            setQuestionId(currentPick.nextQuestion);
+        }        
     }
 
 
