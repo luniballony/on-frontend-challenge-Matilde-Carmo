@@ -217,12 +217,15 @@ $btn-blue: rgb(33, 68, 114);
     color: $white-font;
     cursor: pointer;
     background-color: $btn-blue;
+    border: none;
     border-bottom: 4px solid black;
 
     margin-top: 20px;
     padding: 20px;
     width: 200px;
 
+    text-align: center;
+    text-decoration: none;
   }
 
 

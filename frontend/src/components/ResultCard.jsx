@@ -14,7 +14,7 @@ function ResultCard ({shoe}) {
                 </div>
                 <p>SHADES</p>
             </div>
-            <button className="btn-shop-now">Shop now</button>
+            <a href="https://www.on.com/en-pt/shop/shoes/running" target="_blank" className="btn-shop-now">Shop now</a>
         </div>
     )
 }
