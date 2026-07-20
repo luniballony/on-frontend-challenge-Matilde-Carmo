@@ -50,10 +50,7 @@ function useQuiz () {
     }
 
 
-    return {phase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer
-
-        
-    }
+    return {phase, setPhase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer}
 }
 
 export default useQuiz

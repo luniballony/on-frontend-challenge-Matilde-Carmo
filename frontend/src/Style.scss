@@ -121,6 +121,7 @@ $btn-blue: rgb(33, 68, 114);
   }
 
 }
+
 /*=====================*/
 /*   LOADING SCREEN    */
 /*=====================*/
@@ -139,6 +140,28 @@ $btn-blue: rgb(33, 68, 114);
 
   p {
     color: $light-grey-font;
+  }  
+
+  .btn-restart {
+    cursor: pointer;
+    color: $light-grey-font;
+    background-color: transparent;
+    border: none;
+  }
+
+  #similar-profiles-txt {
+    color: $dark-grey-font;
+    font-size: 26px;
+    text-align: center;
+    margin: 20px;
+  }
+}
+
+
+/*=====================*/
+/*    RESULTS CARD     */
+/*=====================*/
+
 .results-card {
   max-width: 500px;
   display: flex;
@@ -201,11 +224,22 @@ header {
   background-color: white;
   border-bottom: solid $header-border;
   max-height: 60px;
-
+  width: 100vw;
 
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
 
+  .menu {
+    justify-self: start;
+    padding-left: 30px;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    justify-content: center;
+  }
 
 
   img {

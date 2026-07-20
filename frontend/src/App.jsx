@@ -9,7 +9,8 @@ import { useEffect } from "react";
 
 function App() {
 
-  const {phase, questionId, handleAnswer, startQuiz, shoeScore} = useQuiz();
+  // by calling the hook here, we make its state global
+  const {phase, questionId, handleAnswer, startQuiz, shoeScore, setPhase} = useQuiz();
 
 
   // test to check shoeScore ratings
@@ -20,16 +21,23 @@ function App() {
 
 
   if(phase === 'start') return (
-    <Start startQuiz = {startQuiz} />)
+    <div>
+      <Header setPhase = {setPhase} />
+      <Start startQuiz = {startQuiz} />
+    </div>
+  )
   if(phase === 'quiz') return (
-    <Question key = {questionId} questionId = {questionId} handleAnswer = {handleAnswer}  />
+    <div>
+      <Header setPhase = {setPhase} />
+      <Question key = {questionId} questionId = {questionId} handleAnswer = {handleAnswer}  />
+    </div>
   )
 
 
   
   return (
     <div>
-      <Header />
+      <Header setPhase = {setPhase} />
       <Results startQuiz = {startQuiz} shoeScore = { shoeScore} />
 
       

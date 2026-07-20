@@ -1,8 +1,10 @@
-function Header () {
+function Header ({setPhase}) {
     return (
         <header>
-            <p>/// - temporary menu</p>
-            <img src="/assets/on-logo.png" alt="On logo" />
+            <p className="menu">///</p>
+            <button onClick={() => setPhase('start')}>
+                <img src="/assets/on-logo.png" alt="On logo" />
+            </button>
         </header>
     )
 }
