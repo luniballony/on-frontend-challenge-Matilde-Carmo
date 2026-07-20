@@ -1,4 +1,4 @@
-import './Style.css'
+import './Style.scss'
 import Header from './components/Header'
 import Question from './screens/Question'
 import Start from './screens/Start'

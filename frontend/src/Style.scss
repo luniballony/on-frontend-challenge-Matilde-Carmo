@@ -1,0 +1,80 @@
+$light-grey-background : rgb(234, 232, 232);
+$medium-grey-background: grey;
+$dark-grey-background: rgb(45, 43, 43);
+
+$white-font: rgb(236, 236, 236);
+$light-grey-font: rgb(147, 140, 140);
+$dark-grey-font: rgb(23, 22, 22);
+
+$btn-blue: rgb(40, 63, 94);
+
+/* Font
+   src: https://fonts.google.com/specimen/Courier+Prime?categoryFilters=Appearance:%2FMonospace%2FMonospace&preview.script=Latn
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+
+/*=====================*/
+/*    START SCREEN    */
+/*=====================*/
+
+.start-page {
+  font-family: "Courier Prime", monospace;
+
+  position: relative;
+  min-height: 100vh;
+  background-color: $light-grey-background;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  img {
+    align-self: flex-end;
+    position: absolute;
+    z-index: 0;
+    
+    max-height: 100vh;
+    
+    /* display: block; */
+
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); /* same as above but for other browsers */
+  }
+
+  .home-info {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px 40px;
+
+    h1 {
+      color:$dark-grey-font;
+    }
+
+    #btn-start {
+      cursor: pointer;    
+      color: $white-font;
+      background-color: black;
+      border: none;
+      border-bottom: 4px solid $medium-grey-background;
+      padding: 10px 20px;
+      width: 180px;
+      height: 60px;
+      font-size: medium;
+    }
+
+    h3 {
+      color: $light-grey-font;
+    }
+
+
+  }
+
+  
+}
