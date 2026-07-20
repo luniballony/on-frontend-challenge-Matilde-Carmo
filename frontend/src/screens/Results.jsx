@@ -18,7 +18,12 @@ function Results ({startQuiz, shoeScore}) {
             </div>
             <ResultCard shoe = { highestScore } />
             <p id="similar-profiles-txt">Similar profiles</p>
-            <ResultCard shoe = {shoeScore[1]} /> 
+            {
+                shoeScore
+                    .filter((current) => (current.id != highestScore.id)) // filters out highest scored shoe
+                    .sort((a, b) => b.rating - a.rating) // sorts shoe by score desc
+                    .map((item) => <ResultCard shoe = {item} />) // renders the remaining shoes
+            }
             
             <button className="btn-restart" onClick={startQuiz}>Restart Quiz</button>
         </div>
