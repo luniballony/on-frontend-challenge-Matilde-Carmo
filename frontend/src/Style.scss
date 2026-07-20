@@ -213,6 +213,33 @@ $btn-blue: rgb(33, 68, 114);
     padding-left: 30px;
   }  
 
+  .swatches {
+    display: flex;
+    gap: 20px;
+  }
+
+  .swatch-set {
+    cursor: pointer;
+    margin: 10px 0px;
+
+    
+    &:hover {
+      border: 2px solid $dark-grey-background;
+      margin: 8px 0px;
+      padding: 2px ;
+    }
+  }
+
+  .primary-swatch {
+    width: 14px;
+    height: 18px;
+  }
+
+  .secondary-swatch {
+    width: 14px;
+    height: 8px;
+  }
+
   .btn-shop-now {
     color: $white-font;
     cursor: pointer;
