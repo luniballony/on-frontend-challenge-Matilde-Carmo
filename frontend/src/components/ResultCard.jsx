@@ -2,14 +2,15 @@
 function ResultCard ({shoe}) {
 
     return (
-        <div>
-            <img src={`shoes/${shoe.name}.png`} alt="TEST SHOE RESULT" />
+        <div className="results-card">
             <div className="result-info"> 
-                <p>{}</p>
+                <img src={`shoes/${shoe.name}.png`} alt="TEST SHOE RESULT" />
+            
+                <p className="shoe-name">{shoe.name}</p>
                 <p>Your perfect partner in the world's lightest fully-cushioned shoe for Running Remixed.</p>
                 <div className="result-price-shade">    
-                    <p>200 CHF</p>
-                    <p>Neon & Grey</p>
+                    <p className="result-price">200 CHF</p>
+                    <p className="result-shade-name">Neon & Grey</p>
                 </div>
                 <p>SHADES</p>
             </div>

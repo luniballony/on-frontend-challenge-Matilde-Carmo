@@ -11,13 +11,13 @@ function Results ({startQuiz, shoeScore}) {
     }
 
     return (
-        <div>
+        <div className="results-page">
             <div className="result-info">
                 <h2>Congratulations!</h2>
                 <p>{`Based on your selection we've decided on the ${highestScore.name}! Enjoy the 30 day trial!`}</p>
             </div>
             <ResultCard shoe = { highestScore } />
-            <p>Similar profiles</p>
+            <p id="similar-profiles-txt">Similar profiles</p>
             <ResultCard shoe = {shoeScore[1]} /> 
             
             <button className="btn-restart" onClick={startQuiz}>Restart Quiz</button>

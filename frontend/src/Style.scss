@@ -4,10 +4,12 @@ $dark-grey-background: rgb(45, 43, 43);
 
 $white-font: rgb(236, 236, 236);
 $light-grey-font: rgb(147, 140, 140);
-$dark-grey-font: rgb(23, 22, 22);
+$dark-grey-font: rgb(87, 83, 83);
+
+$header-border: rgba(87, 83, 83, 0.474);
 
 $btn-white-border: rgb(236, 236, 236, 0.4);
-$btn-blue: rgb(40, 63, 94);
+$btn-blue: rgb(33, 68, 114);
 
 /* Font
    src: https://fonts.google.com/specimen/Courier+Prime?categoryFilters=Appearance:%2FMonospace%2FMonospace&preview.script=Latn
@@ -80,7 +82,7 @@ $btn-blue: rgb(40, 63, 94);
 }
 
 /*=====================*/
-/*   Question SCREEN   */
+/*   QUESTION SCREEN   */
 /*=====================*/
 
 .question-page {
@@ -119,3 +121,98 @@ $btn-blue: rgb(40, 63, 94);
   }
 
 }
+/*=====================*/
+/*   LOADING SCREEN    */
+/*=====================*/
+
+/*=====================*/
+/*   RESULTS SCREEN    */
+/*=====================*/
+
+.results-page {
+  background-color: white;
+  color: $dark-grey-font;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    color: $light-grey-font;
+.results-card {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+  img {
+    max-width: 400px;
+    margin: 20px;
+  }
+
+
+  .result-info {
+    background-color: $light-grey-background;
+    padding: 40px;
+  }
+
+  .shoe-name {
+    color: $dark-grey-font;
+    font-size: 36px;
+    margin: 0;
+  }
+
+  .btn-shop-now {
+    color: $white-font;
+    cursor: pointer;
+    background-color: $btn-blue;
+    border-bottom: 4px solid black;
+
+    margin-top: 20px;
+    padding: 20px;
+    width: 200px;
+
+  }
+
+  .result-price-shade {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .result-price {
+    border-right: solid $light-grey-font;
+    padding-right: 30px;
+  }
+
+  .result-shade-name {
+    padding-left: 30px;
+  }
+
+
+}
+
+/*=====================*/
+/*   HEADER COMPONENT  */
+/*=====================*/
+
+header {
+  background-color: white;
+  border-bottom: solid $header-border;
+  max-height: 60px;
+
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+
+
+  img {
+    max-height: 40px;
+    margin: 6px;
+  }
+}
+
+
+
