@@ -6,6 +6,7 @@ $white-font: rgb(236, 236, 236);
 $light-grey-font: rgb(147, 140, 140);
 $dark-grey-font: rgb(23, 22, 22);
 
+$btn-white-border: rgb(236, 236, 236, 0.4);
 $btn-blue: rgb(40, 63, 94);
 
 /* Font
@@ -16,7 +17,7 @@ $btn-blue: rgb(40, 63, 94);
 
 
 /*=====================*/
-/*    START SCREEN    */
+/*    START SCREEN     */
 /*=====================*/
 
 .start-page {
@@ -75,6 +76,46 @@ $btn-blue: rgb(40, 63, 94);
 
 
   }
-
   
+}
+
+/*=====================*/
+/*   Question SCREEN   */
+/*=====================*/
+
+.question-page {
+  color: $white-font;
+  background-color: $dark-grey-background;
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .question-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .btn-box {    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  button {
+    cursor: pointer;
+    color: $white-font;
+    background-color: transparent;
+    border: 1px solid $btn-white-border;
+    padding: 10px;
+    width: 200px;
+  }
+
 }
