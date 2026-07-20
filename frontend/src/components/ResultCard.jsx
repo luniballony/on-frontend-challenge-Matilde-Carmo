@@ -3,10 +3,10 @@ function ResultCard ({shoe}) {
 
     // temporary data set to mimick the swatch setcion
     const shadeSet = [
-        {name: 'Grey', primary: '#797979', secondary: '#c8e42d'},
-        {name: 'Moss', primary: '#1e5053', secondary: '#cc6332'},
-        {name: 'Blue', primary: '#21255f', secondary: '#5d7ed6'},
-        {name: 'Black', primary: '#0e0404', secondary: '#5c5757'}
+        {name: 'Grey', primary: '#808581', secondary: '#E2EB22'},
+        {name: 'Moss', primary: '#285759', secondary: '#E9661D'},
+        {name: 'Blue', primary: '#0A4776', secondary: '#2A7EAA'},
+        {name: 'Black', primary: '#0e0404', secondary: '#4F4F4F'}
     ]
 
     return (

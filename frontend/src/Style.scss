@@ -1,16 +1,16 @@
-$light-grey-background : rgba(244, 244, 244, 0.549);
+$light-grey-background : #F7F7F7;
 $medium-grey-background: grey;
-$dark-grey-background: rgb(45, 43, 43);
+$dark-grey-background: #333333;
 
-$white-font: rgb(236, 236, 236);
-$light-grey-font: rgb(147, 140, 140);
-$medium-grey-font: rgb(99, 95, 95);
-$dark-grey-font: rgb(87, 83, 83);
+$white-font: #F6F6F6;
+$light-grey-font: #B7B7B7;
+$medium-grey-font: #696969;
+$dark-grey-font: #343434;
 
-$header-border: rgba(87, 83, 83, 0.474);
+$header-border: #EAEAEA;
 
-$btn-white-border: rgb(236, 236, 236, 0.4);
-$btn-blue: rgb(33, 68, 114);
+$btn-white-border: #777777;
+$btn-blue: #3C6473;
 
 /* Font
    src: https://fonts.google.com/specimen/Courier+Prime?categoryFilters=Appearance:%2FMonospace%2FMonospace&preview.script=Latn
@@ -201,7 +201,7 @@ $btn-blue: rgb(33, 68, 114);
   .result-price-shade-box {
     display: flex;
     justify-content: flex-start;
-    color: $dark-grey-font;
+    color: $medium-grey-font;
   }
 
   .result-price {
