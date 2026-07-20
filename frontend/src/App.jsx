@@ -1,5 +1,6 @@
 import './Style.scss'
 import Header from './components/Header'
+import Loading from './screens/Loading'
 import Question from './screens/Question'
 import Start from './screens/Start'
 import useQuiz from './hooks/useQuiz'
@@ -24,6 +25,7 @@ function App() {
     <div>
       <Header setPhase = {setPhase} />
       <Start startQuiz = {startQuiz} />
+
     </div>
   )
   if(phase === 'quiz') return (
