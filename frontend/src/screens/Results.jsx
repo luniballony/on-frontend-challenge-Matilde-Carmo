@@ -11,7 +11,7 @@ function Results ({startQuiz, shoeScore}) {
     }
 
     return (
-        <div className="results-page">
+        <div className="results-screen">
             <div className="result-info">
                 <h2>Congratulations!</h2>
                 <p>{`Based on your selection we've decided on the ${highestScore.name}! Enjoy the 30 day trial!`}</p>

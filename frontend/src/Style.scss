@@ -1,9 +1,10 @@
-$light-grey-background : rgb(234, 232, 232);
+$light-grey-background : rgba(244, 244, 244, 0.549);
 $medium-grey-background: grey;
 $dark-grey-background: rgb(45, 43, 43);
 
 $white-font: rgb(236, 236, 236);
 $light-grey-font: rgb(147, 140, 140);
+$medium-grey-font: rgb(99, 95, 95);
 $dark-grey-font: rgb(87, 83, 83);
 
 $header-border: rgba(87, 83, 83, 0.474);
@@ -22,7 +23,7 @@ $btn-blue: rgb(33, 68, 114);
 /*    START SCREEN     */
 /*=====================*/
 
-.start-page {
+.start-screen {
   font-family: "Courier Prime", monospace;
 
   position: relative;
@@ -85,7 +86,7 @@ $btn-blue: rgb(33, 68, 114);
 /*   QUESTION SCREEN   */
 /*=====================*/
 
-.question-page {
+.question-screen {
   color: $white-font;
   background-color: $dark-grey-background;
   
@@ -130,17 +131,13 @@ $btn-blue: rgb(33, 68, 114);
 /*   RESULTS SCREEN    */
 /*=====================*/
 
-.results-page {
+.results-screen {
   background-color: white;
   color: $dark-grey-font;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  p {
-    color: $light-grey-font;
-  }  
 
   .btn-restart {
     cursor: pointer;
@@ -170,6 +167,7 @@ $btn-blue: rgb(33, 68, 114);
   align-items: center;
   margin: 20px;
 
+
   img {
     max-width: 400px;
     margin: 20px;
@@ -178,6 +176,7 @@ $btn-blue: rgb(33, 68, 114);
 
   .result-info {
     background-color: $light-grey-background;
+    color: $light-grey-font;
     padding: 40px;
   }
 
@@ -186,6 +185,21 @@ $btn-blue: rgb(33, 68, 114);
     font-size: 36px;
     margin: 0;
   }
+
+  .result-price-shade-box {
+    display: flex;
+    justify-content: flex-start;
+    color: $dark-grey-font;
+  }
+
+  .result-price {
+    border-right: solid $light-grey-font;
+    padding-right: 30px;
+  }
+
+  .result-shade-name {
+    padding-left: 30px;
+  }  
 
   .btn-shop-now {
     color: $white-font;
@@ -197,20 +211,6 @@ $btn-blue: rgb(33, 68, 114);
     padding: 20px;
     width: 200px;
 
-  }
-
-  .result-price-shade {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .result-price {
-    border-right: solid $light-grey-font;
-    padding-right: 30px;
-  }
-
-  .result-shade-name {
-    padding-left: 30px;
   }
 
 
@@ -236,6 +236,7 @@ header {
   }
 
   button {
+    cursor: pointer;
     border: none;
     background-color: transparent;
     justify-content: center;

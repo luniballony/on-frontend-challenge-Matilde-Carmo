@@ -1,8 +1,8 @@
 function Start ({startQuiz}) {
         return (
-        <div className="start-page">
+        <div className="start-screen">
             <img src="/assets/Background Image Start Screen.png" alt="Background Image Start Screen" />
-            
+
             <div className="home-info">
                 <h1>Take the quiz and try your first pair!</h1>
                 <button id="btn-start" onClick={startQuiz}>

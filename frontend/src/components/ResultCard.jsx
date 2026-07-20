@@ -8,7 +8,7 @@ function ResultCard ({shoe}) {
             
                 <p className="shoe-name">{shoe.name}</p>
                 <p>Your perfect partner in the world's lightest fully-cushioned shoe for Running Remixed.</p>
-                <div className="result-price-shade">    
+                <div className="result-price-shade-box">    
                     <p className="result-price">200 CHF</p>
                     <p className="result-shade-name">Neon & Grey</p>
                 </div>

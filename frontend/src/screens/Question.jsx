@@ -4,7 +4,7 @@ function Question ({ questionId , handleAnswer}) {
     const question = data.questions[questionId];
     
     return(
-        <div className="question-page">
+        <div className="question-screen">
             <div className="question-info">
                 <h3>TRY ON QUIZ</h3>
                 <h3>30 DAYS RISK FREE</h3>
