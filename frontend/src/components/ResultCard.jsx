@@ -11,7 +11,7 @@ function ResultCard ({shoe}) {
 
     return (
         <div className="results-card">
-            <div className="result-info"> 
+            <div className="result-card-content"> 
                 <img src={`shoes/${shoe.name}.png`} alt={`${shoe.name} Image`} />
             
                 <p className="shoe-name">{shoe.name}</p>
