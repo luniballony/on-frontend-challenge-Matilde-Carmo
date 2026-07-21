@@ -11,7 +11,7 @@ function Question ({ questionId , handleAnswer}) {
             </div>
             <div>
                 <p>{question.copy}</p>
-                <div className="btn-box">
+                <div className="btn-container">
                     <button onClick={() => handleAnswer(0)}
                         >{question.answers[0].copy}</button>
 
