@@ -1,6 +1,8 @@
-# PROJECT DESCRIPTIO
+# PROJECT DESCRIPTION
 
 This application allows users to complete a short quiz to determine their ideal On running shoe.
+
+Each answer contributes points to one or more shoes and determines the following question.
 
 At the end of the quiz, the highest-scoring shoe (or two shoes in the case of a tie) is presented as the recommended match. The remaining shoes are then displayed in descending order based on their compatibility score.
 
@@ -28,7 +30,7 @@ At the end of the quiz, the highest-scoring shoe (or two shoes in the case of a 
 
 # REQUIREMENTS:
 
-- Node.js
+- Node.js (18+ recommended)
 - npm
 
 # TO INSTALL & RUN: 
@@ -73,6 +75,7 @@ Responsive layouts were verified using:
 - Samsung Galaxy S20 Ultra
 - iPad Air
 - iPad Pro
+- 
 
 # FOLDER STRUCTURE
 ```
