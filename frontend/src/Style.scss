@@ -9,7 +9,6 @@ $dark-grey-font: #343434;
 
 $header-border: #EAEAEA;
 
-$btn-white-border: #777777;
 $btn-blue: #3C6473;
 
 /* Font
@@ -100,15 +99,25 @@ $btn-blue: #3C6473;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
+    margin: 30px;
+    
+      h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 100;
+      }
   }
 
-  h3 {
-    margin: 0;
+  .question {
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
   }
 
   .btn-container {    
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
   }
 
@@ -116,9 +125,20 @@ $btn-blue: #3C6473;
     cursor: pointer;
     color: $white-font;
     background-color: transparent;
-    border: 1px solid $btn-white-border;
-    padding: 10px;
-    width: 200px;
+    border: 1px solid $white-font;
+    padding: 20px;
+    width: 220px;
+
+    transition: 
+      background-color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
+
+
+    &:hover {
+      background-color: $light-grey-background;
+      color: $dark-grey-font;
+      border: 1px solid transparent;
+    }
   }
 
 }

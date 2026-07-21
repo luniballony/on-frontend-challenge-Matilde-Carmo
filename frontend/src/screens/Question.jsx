@@ -10,13 +10,19 @@ function Question ({ questionId , handleAnswer}) {
                 <h3>30 DAYS RISK FREE</h3>
             </div>
             <div>
-                <p>{question.copy}</p>
+                <p className="question">{question.copy}</p>
                 <div className="btn-container">
-                    <button onClick={() => handleAnswer(0)}
-                        >{question.answers[0].copy}</button>
-
-                    <button onClick={() => handleAnswer(1)}
-                        >{question.answers[1].copy}</button>
+                    {
+                        // using map in case in the future we have questions with 
+                        // more than 2 possible answers
+                        question.answers.map((item, index) => 
+                            // we should ideally use id to track the keys and
+                            // handleAnswer, but since not all answers in the 
+                            // file have id, we use index instead
+                            <button key={item.index} onClick={() => handleAnswer(item.index)}>
+                                {item.copy}
+                            </button> 
+                    )}    
                 </div>
             </div>
         </div>
