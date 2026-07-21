@@ -127,71 +127,76 @@ header {
 
 .start-screen {
   font-family: "Courier Prime", monospace;
+  width: 100%;
   height: 100vh;
 
   position: relative;
   background-color: $light-grey-background;
 
+  overflow: hidden;
+}
+
+.background-img {
+  position: absolute;
+  inset: 0;
+  //width: 100%; // change this to change the xx
+  height: 66%;
+  object-fit: cover; // fills the screen
+  object-position: 30% center;
+  
+  z-index: 0;
+
+  align-self: flex-end; // makes it stick to bottom
+
+  // fading
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); /* same as above but for other browsers */
+}
+
+
+.home-info {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+
+  top: 16%;
+  left: 4%;
+
   display: flex;
   flex-direction: column;
-
-  img {
-    align-self: flex-end;
-    position: absolute;
-    z-index: 0;
-    
-    max-height: 90vh;
-    
-    /* display: block; */
-
-    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); /* same as above but for other browsers */
-  }
-
-  .home-info {
-    background-color: transparent;
-    position: relative;
-    z-index: 1;
-
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    
-
-    margin: 100px 40px;
-
-    h1 {
-      color:$dark-grey-font;
-      font-size: 1.5rem;
-      padding: 1rem 0;
-      font-weight: 100;
-    }
-
-    #btn-start {
-      cursor: pointer;    
-      color: $white-font;
-      background-color: black;
-      border: none;
-      border-bottom: 4px solid $medium-grey-background;
-      padding: 10px 20px;
-      width: 200px;
-      height: 60px;
-
-      font-family: "Courier Prime", monospace;
-      font-size: 1.2rem;
-    }
-
-    h3 {
-      color: $light-grey-font;
-      padding: 20px 0;
-      font-size: 0.8rem;
-      font-weight: 100;
-    }
-
-
-  }
+  align-items: start;
   
+
+  h1 {
+    color:$dark-grey-font;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    font-weight: 100;
+  }
+
+  .btn-start {
+    cursor: pointer;    
+    color: $white-font;
+    background-color: black;
+    border: none;
+    border-bottom: 4px solid $medium-grey-background;
+    padding: 10px 20px;
+    width: 200px;
+    height: 60px;
+
+    font-family: "Courier Prime", monospace;
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    color: $light-grey-font;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+
 }
+
 
 /*=====================*/
 /*   QUESTION SCREEN   */
