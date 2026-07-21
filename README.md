@@ -20,6 +20,7 @@ At the end of the quiz, the highest-scoring shoe (or two shoes in the case of a 
 - JavaScript
 - React
 - SCSS
+- Vite
 
 # DEPENDENCIES:
 
