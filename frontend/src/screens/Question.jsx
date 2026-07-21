@@ -6,8 +6,8 @@ function Question ({ questionId , handleAnswer}) {
     return(
         <div className="question-screen">
             <div className="question-info">
-                <h3>TRY ON QUIZ</h3>
-                <h3>30 DAYS RISK FREE</h3>
+                <p>TRY ON QUIZ</p>
+                <p>30 DAYS RISK FREE</p>
             </div>
             <div>
                 <p className="question">{question.copy}</p>
