@@ -31,7 +31,7 @@ function ResultCard ({shoe}) {
                     }     
                 </div>      
             </div>
-            <a href="https://www.on.com/en-pt/shop/shoes/running" target="_blank" className="btn-shop-now">Shop now</a>
+            <a href="https://www.on.com/de-ch/shop/shoes/sneakers" target="_blank" className="btn-shop-now">Shop now</a>
         </div>
     )
 }
