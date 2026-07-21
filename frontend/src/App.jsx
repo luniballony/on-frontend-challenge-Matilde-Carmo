@@ -22,10 +22,12 @@ function App() {
   let screen;
 
   if (isLoading) {
-    screen = <Loading />;
+    screen = <Loading className="content" />;
 
   } else if (phase === "start") {
-    screen = <Start startQuiz={startQuiz} />;
+    screen = <Start 
+      startQuiz={startQuiz}
+      className="content" />;
 
   } else if (phase === "quiz") {
     screen = (
@@ -33,6 +35,7 @@ function App() {
         key={questionId}
         questionId={questionId}
         handleAnswer={handleAnswer}
+        className="content"
       />
     );
 
@@ -41,6 +44,7 @@ function App() {
       <Results
         startQuiz={startQuiz}
         shoeScore={shoeScore}
+        className="content"
       />
     );
   }
