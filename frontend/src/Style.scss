@@ -157,14 +157,23 @@ header {
 }
 
 @media (min-width: 768px) {
+
+  .image-container {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+  }
+
   .background-img {
     background-color: grey;
     position: absolute;
     bottom: 0;
 
-    height: clamp(600px, 80vh, 1000px);
+    height: clamp(600px, 70vh, 1000px);
+    max-width: 80vw;
     object-fit: cover; // fills the screen
-    object-position: 100% center;
+    
     
     z-index: 0;
 
@@ -191,8 +200,8 @@ header {
     bottom: 0;
 
     height: clamp(600px, 90vh, 900px);
-    object-fit: none; // fills the screen
-    object-position: bottom right;
+    object-fit: cover; // fills the screen
+    // object-position: bottom right;
     z-index: 0;
 
     align-self: flex-end; // makes it stick to bottom
