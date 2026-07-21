@@ -12,10 +12,12 @@ function Results ({startQuiz, shoeScore}) {
     // if the top two shoes tie, display both
     // additional ties are intentionally shown under "Similar profiles"
     // to keep the recommendations concise
+    let typeOfClass = 'single';
     let numberOfShoes = 1;
     if (sortedShoes[0].rating === sortedShoes[1].rating) {
         numberOfShoes ++;
         featuredText = `${sortedShoes[0].name} and ${sortedShoes[1].name}`; // updates message in case of tie
+        typeOfClass = 'double'; // helps design the grid in css
     }
     
 
@@ -29,7 +31,7 @@ function Results ({startQuiz, shoeScore}) {
                 <p>{`Based on your selection we've decided on the ${featuredText}! Enjoy the 30 day trial!`}</p>
             </div> 
 
-            <div className="featured-container">
+            <div className={`featured-container ${typeOfClass}`}>
                 {
                     featuredShoes.map ((item) => 
                         <ResultCard key={item.id} shoe = { item } />)
