@@ -7,7 +7,7 @@ function Header ({setPhase, startQuiz}) {
     return (
         <header>
             <div className="menu-container">
-                <img src="/assets/menu.png" alt="Menu Icon" onClick={() => setMenuOpen(!menuOpen)} />
+                <img src="/assets/menu.png" alt="Menu Icon" onClick={() => setMenuOpen(!menuOpen)} className="menu-icon" />
 
                 {menuOpen && (
                     <div className="menu-panel">
