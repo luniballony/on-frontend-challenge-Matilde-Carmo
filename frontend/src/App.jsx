@@ -11,40 +11,49 @@ import { useEffect } from "react";
 function App() {
 
   // by calling the hook here, we make its state global
-  const {phase, questionId, handleAnswer, startQuiz, shoeScore, setPhase} = useQuiz();
-
+  const {phase, setPhase, questionId, handleAnswer, startQuiz, shoeScore, isLoading} = useQuiz();
 
   // test to check shoeScore ratings
   useEffect(() => {
     console.log(shoeScore)
   }, [shoeScore]);
   
+ 
+  let screen;
 
+  if (isLoading) {
+    screen = <Loading />;
 
-  if(phase === 'start') return (
-    <div>
-      <Header setPhase = {setPhase} />
-      <Start startQuiz = {startQuiz} />
+  } else if (phase === "start") {
+    screen = <Start startQuiz={startQuiz} />;
 
-    </div>
-  )
-  if(phase === 'quiz') return (
-    <div>
-      <Header setPhase = {setPhase} />
-      <Question key = {questionId} questionId = {questionId} handleAnswer = {handleAnswer}  />
-    </div>
-  )
+  } else if (phase === "quiz") {
+    screen = (
+      <Question
+        key={questionId}
+        questionId={questionId}
+        handleAnswer={handleAnswer}
+      />
+    );
 
+  } else {
+    screen = (
+      <Results
+        startQuiz={startQuiz}
+        shoeScore={shoeScore}
+      />
+    );
+  }
 
-  
   return (
-    <div>
-      <Header setPhase = {setPhase} />
-      <Results startQuiz = {startQuiz} shoeScore = { shoeScore} />
-
-      
+    <div className="app">
+      <Header
+        setPhase={setPhase}
+        startQuiz={startQuiz}
+      />
+      {screen}
     </div>
-  )
+  );
 }
 
 export default App

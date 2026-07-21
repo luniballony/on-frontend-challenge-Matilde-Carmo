@@ -11,8 +11,10 @@ function useQuiz () {
 
     const [shoeScore, setShoeScore] = useState(data.shoes);
 
+    const [isLoading, setIsLoading] = useState(false);
+
     function startQuiz () {
-        console.log("Starting Quiz...")
+        setIsLoading(true); // in a bigger project, we would should 'Loading' while we start the quiz
         setPhase('quiz');
         setQuestionId(0); // in case its called in Results
         
@@ -22,8 +24,9 @@ function useQuiz () {
                 rating: 0
             }))
         );
+        
+        setIsLoading(false);
     }
-
 
 
     // when a user picks an answer, we call this function
@@ -43,14 +46,20 @@ function useQuiz () {
 
 
         if (currentPick.nextQuestion === '') {
-            setPhase('results');
+            setIsLoading(true);
+            
+            // shows 'Loading' before results
+            setTimeout(() => {
+                setPhase("results");
+                setIsLoading(false);
+            }, 1200); 
         } else {
             setQuestionId(currentPick.nextQuestion);
         }        
     }
 
 
-    return {phase, setPhase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer}
+    return {phase, setPhase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer, isLoading}
 }
 
 export default useQuiz
