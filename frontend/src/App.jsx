@@ -12,12 +12,6 @@ function App() {
 
   // by calling the hook here, we make its state global
   const {phase, setPhase, questionId, handleAnswer, startQuiz, shoeScore, isLoading} = useQuiz();
-
-  // test to check shoeScore ratings
-  useEffect(() => {
-    console.log(shoeScore)
-  }, [shoeScore]);
-  
  
   let screen;
 

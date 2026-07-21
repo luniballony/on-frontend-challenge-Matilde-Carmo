@@ -15,12 +15,8 @@ $phone-screen: 300px;
 $tablet-screen: 768px;
 $pc-screen: 1040px;
 
-/* Font
-   src: https://fonts.google.com/specimen/Courier+Prime?categoryFilters=Appearance:%2FMonospace%2FMonospace&preview.script=Latn
 
-*/
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-
 
 
 * {
@@ -446,25 +442,22 @@ header {
   }
 
   @media (min-width: 450px) {
-  .result-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .result-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    p {
+      p {
+        text-align: center;
+        width: 400px;
+      }
+    }
+
+    .similar-profiles-txt {
       text-align: center;
-      width: 400px;
     }
   }
-
-  .similar-profiles-txt {
-    text-align: center;
-  }
 }
-}
-
-
-
 
 
 /*=====================*/
