@@ -19,7 +19,7 @@ function Question ({ questionId , handleAnswer}) {
                             // we should ideally use id to track the keys and
                             // handleAnswer, but since not all answers in the 
                             // file have id, we use index instead
-                            <button key={item.index} onClick={() => handleAnswer(item.index)}>
+                            <button key={index} onClick={() => handleAnswer(index)}>
                                 {item.copy}
                             </button> 
                     )}    
