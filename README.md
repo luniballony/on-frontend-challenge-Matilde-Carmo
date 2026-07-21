@@ -94,3 +94,13 @@ frontend/
 - Font: https://fonts.google.com/specimen/Courier+Prime?categoryFilters=Appearance:%2FMonospace%2FMonospace&preview.script=Latn
 - Tab Icon: https://www.facebook.com/On/
 - On Logo: https://seeklogo.com/vector-logo/439325/on 
+
+# LAYOUTS (taken from Pixel 7 model)
+
+![alt text](./layouts/start.png "Start Screen")
+![alt text](./layouts/question.png "Question Screen")
+![alt text](./layouts/question-menu.png "Question & Menu Screen")
+![alt text](./layouts/results-1.png "Results Screen")
+![alt text](./layouts/results-2.png "Results Screen")
+![alt text](./layouts/results-3.png "Results Screen")
+![alt text](./layouts/loading.png "Loading Screen")
