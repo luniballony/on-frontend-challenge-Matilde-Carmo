@@ -36,7 +36,7 @@ function Results ({startQuiz, shoeScore}) {
                 }
             </div>
 
-            <p id="similar-profiles-txt">Similar profiles</p>
+            <p className="similar-profiles-txt">Similar profiles</p>
 
             <div className="similar-profile-container">
                 {

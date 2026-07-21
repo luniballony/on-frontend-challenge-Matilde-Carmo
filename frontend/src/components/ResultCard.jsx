@@ -15,7 +15,9 @@ function ResultCard ({shoe}) {
                 <img src={`shoes/${shoe.name}.png`} alt={`${shoe.name} Image`} />
             
                 <p className="shoe-name">{shoe.name}</p>
-                <p>Your perfect partner in the world's lightest fully-cushioned shoe for Running Remixed.</p>
+                <p className="shoe-description">
+                    Your perfect partner in the world's lightest fully-cushioned shoe for Running Remixed.
+                </p>
                 <div className="result-price-shade-container">    
                     <p className="result-price">200 CHF</p>
                     <p className="result-shade-name">{shadeSet[0].name}</p> {/* This would ideally take the actual shoe shade */}
