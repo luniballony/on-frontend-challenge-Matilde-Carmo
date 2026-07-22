@@ -6,6 +6,12 @@ Each answer contributes points to one or more shoes and determines the following
 
 At the end of the quiz, the highest-scoring shoe (or two shoes in the case of a tie) is presented as the recommended match. The remaining shoes are then displayed in descending order based on their compatibility score.
 
+# LIVE DEMO
+
+Project Deployed using Vercel:
+
+https://on-frontend-challenge-luniballony.vercel.app/
+
 # Features
 
 - Responsive design
