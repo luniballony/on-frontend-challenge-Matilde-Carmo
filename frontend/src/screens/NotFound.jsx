@@ -1,8 +1,9 @@
 function NotFound () {
 
     return (
-        <div>
-            oh no, page not found
+        <div className="notfound-screen content">
+            <h1>404</h1>
+            <p>Page not found</p>
         </div>
     )
 }

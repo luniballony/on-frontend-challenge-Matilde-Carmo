@@ -584,5 +584,24 @@ header {
 }
 
 
+  /*======================*/
+  /*      NOT FOUND      */
+  /*====================*/
+
+.notfound-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: $light-grey-font;
+  background-color: $dark-grey-background;
+  text-align: center;
+
+  font-size: clamp(16px, 5vh, 30px);
+  padding: 20px;
+}
+
+
 
 

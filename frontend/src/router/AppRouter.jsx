@@ -14,9 +14,9 @@ function AppRouter ({phase, questionId, handleAnswer, startQuiz, shoeScore}) {
             <EndQuizNav phase={phase} />
             <Routes>
                 <Route path='/' element={<Start startQuiz={startQuiz} className="content" />} />
-                <Route path="/quiz" element={<Question questionId={questionId} handleAnswer={handleAnswer} />} />
+                <Route path="/quiz" element={<Question questionId={questionId} handleAnswer={handleAnswer} className="content"/>} />
                 <Route path="/results" element={<Results startQuiz={startQuiz} shoeScore={shoeScore} className="content" />} />
-                <Route path='/loading' element={<Loading />} />
+                <Route path='/loading' element={<Loading className="content" />} />
                 <Route path='/*' element={<NotFound />} />
             </Routes>
         </BrowserRouter>
