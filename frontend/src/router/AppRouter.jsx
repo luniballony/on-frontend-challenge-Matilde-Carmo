@@ -3,6 +3,7 @@ import Start from '../screens/Start'
 import NotFound from '../screens/NotFound';
 import Question from "../screens/Question";
 import Results from '../screens/Results';
+import Loading from '../screens/Loading';
 import useQuiz from "../hooks/useQuiz";
 import { useEffect } from 'react';
 
@@ -18,6 +19,7 @@ function AppRouter () {
                 <Route path='/' element={<Start startQuiz={startQuiz} className="content" />} />
                 <Route path="/quiz" element={<Question questionId={questionId} handleAnswer={handleAnswer} />} />
                 <Route path="/results" element={<Results startQuiz={startQuiz} shoeScore={shoeScore} className="content" />} />
+                <Route path='/loading' element={<Loading />} />
                 <Route path='/*' element={<NotFound />} />
             </Routes>
         </BrowserRouter>
@@ -33,8 +35,16 @@ function EndQuizNav ({phase}) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (phase === 'results') navigate('/results');
-    }, [phase, navigate]);
+        if (phase === 'results') {
+            
+            navigate('/loading');
+
+            setTimeout(() => {
+                navigate('/results');
+            }, 1200); 
+
+        }
+    }, [phase]);
     
     return null;
 }

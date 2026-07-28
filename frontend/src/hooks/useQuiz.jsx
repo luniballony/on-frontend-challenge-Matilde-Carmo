@@ -46,13 +46,15 @@ function useQuiz () {
 
 
         if (currentPick.nextQuestion === '') {
-            setIsLoading(true);
+            // setIsLoading(true);
             
-            // shows 'Loading' before results
-            setTimeout(() => {
-                setPhase("results");
-                setIsLoading(false);
-            }, 1200); 
+            setPhase("results");
+            
+            // // shows 'Loading' before results
+            // setTimeout(() => {
+            //     setPhase("results");
+            //     setIsLoading(false);
+            // }, 1200); 
         } else {
             setQuestionId(currentPick.nextQuestion);
         }        
