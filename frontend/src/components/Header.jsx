@@ -11,21 +11,25 @@ function Header ({setPhase, startQuiz}) {
 
                 {menuOpen && (
                     <div className="menu-panel">
-                        <button
-                            onClick={() => {
-                                setPhase("start");
-                                setMenuOpen(false);
-                            }}>
-                            Home
-                        </button>
+                        <a href="/">
+                            <button
+                                onClick={() => {
+                                    setPhase("start");
+                                    setMenuOpen(false);
+                                }}>
+                                Home
+                            </button>
+                        </a>
 
-                        <button onClick={() => {
-                                setPhase("quiz");
-                                startQuiz();
-                                setMenuOpen(false);
-                            }}> 
-                            Start Quiz
-                        </button>
+                        <a href="/quiz">     
+                            <button onClick={() => {
+                                    setPhase("quiz");
+                                    startQuiz();
+                                    setMenuOpen(false);
+                                }}> 
+                                Start Quiz
+                            </button>
+                        </a>   
 
                         <a href="https://www.on.com/de-ch"
                             target="_blank"
@@ -37,8 +41,10 @@ function Header ({setPhase, startQuiz}) {
                 )}
                 
             </div>
-            <button onClick={() => setPhase('start')}>
-                <img src="/assets/on-logo.png" alt="On logo" />
+            <button>
+                <a href="/">
+                    <img src="/assets/on-logo.png" alt="On logo" />
+                </a>
             </button>
         </header>
     )
