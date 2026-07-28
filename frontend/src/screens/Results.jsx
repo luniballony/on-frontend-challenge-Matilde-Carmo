@@ -47,8 +47,10 @@ function Results ({startQuiz, shoeScore}) {
                         .map((item) => <ResultCard key={item.id} shoe = {item} />) // renders the remaining shoes
                 }
             </div>
-            <button className="btn-restart" onClick={startQuiz}>Restart Quiz</button>
-        </div>
+            <a href="/">
+                <button className="btn-restart" onClick={startQuiz}>Restart Quiz</button>
+            </a>
+       </div>
     )
 }
 
