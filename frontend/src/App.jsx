@@ -1,4 +1,5 @@
 import './Style.scss'
+import AppRouter from './router/AppRouter'
 import Header from './components/Header'
 import Loading from './screens/Loading'
 import Question from './screens/Question'
@@ -48,7 +49,8 @@ function App() {
         setPhase={setPhase}
         startQuiz={startQuiz}
       />
-      {screen}
+      {/* {screen} */}
+      <AppRouter />
     </div>
   );
 }
