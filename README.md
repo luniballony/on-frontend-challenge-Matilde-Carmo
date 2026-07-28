@@ -67,6 +67,15 @@ https://on-frontend-challenge-luniballony.vercel.app/
 - Perform cross-browser testing and compatibility improvements
 - Add automated unit and integration tests
 
+# POST-SUBMISSION IMPROVEMENTS:
+
+Branch contains improvements made after the original submission.
+It will remain separate from the submitted version to preserve a clear distinction between the two.
+ 
+ - Created new branch with React Router navigation 
+ - Improved navigation flow between quiz states
+ - Add Not Found Page for invalid urls
+
 # TESTING:
 
 Project was tested on:
@@ -83,7 +92,7 @@ Responsive layouts were verified using:
 - iPad Pro
 - 
 
-# FOLDER STRUCTURE
+# FOLDER STRUCTURE:
 ```
 frontend/
 ├── public/
@@ -104,7 +113,7 @@ frontend/
 - Tab Icon: https://www.facebook.com/On/
 - On Logo: https://seeklogo.com/vector-logo/439325/on 
 
-# LAYOUTS (taken from Pixel 7 model)
+# LAYOUTS (taken from Pixel 7 model):
 
 ![alt text](./layouts/start.png "Start Screen")
 ![alt text](./layouts/question.png "Question Screen")
