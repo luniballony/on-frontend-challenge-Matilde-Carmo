@@ -1,17 +1,14 @@
 import { BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom';
+import { useEffect } from 'react';
+
 import Start from '../screens/Start'
-import NotFound from '../screens/NotFound';
 import Question from "../screens/Question";
 import Results from '../screens/Results';
 import Loading from '../screens/Loading';
-import useQuiz from "../hooks/useQuiz";
-import { useEffect } from 'react';
+import NotFound from '../screens/NotFound';
 
-function AppRouter () {
+function AppRouter ({phase, questionId, handleAnswer, startQuiz, shoeScore}) {
 
-    const {phase, questionId, handleAnswer, startQuiz, shoeScore} = useQuiz();
-
- 
     return (
         <BrowserRouter>
             <EndQuizNav phase={phase} />
@@ -24,7 +21,6 @@ function AppRouter () {
             </Routes>
         </BrowserRouter>
     )
-
 }
 
 

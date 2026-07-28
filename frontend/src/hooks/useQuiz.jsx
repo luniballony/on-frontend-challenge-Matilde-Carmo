@@ -3,19 +3,15 @@ import data from "../data/data.json"
 
 function useQuiz () {
 
-    // responsible to track users position: start / quiz / results
-    const [phase, setPhase] = useState('start');
+    // phase responsible only for dealing with transaction between quiz and results
+    const [phase, setPhase] = useState('');
 
     // tracks the current question Id
     const [questionId, setQuestionId] = useState(0);
 
     const [shoeScore, setShoeScore] = useState(data.shoes);
 
-    const [isLoading, setIsLoading] = useState(false);
-
     function startQuiz () {
-        setIsLoading(true); // in a bigger project, we would should 'Loading' while we start the quiz
-        setPhase('quiz');
         setQuestionId(0); // in case its called in Results
         
         setShoeScore(prevShoes =>
@@ -25,7 +21,6 @@ function useQuiz () {
             }))
         );
         
-        setIsLoading(false);
     }
 
 
@@ -46,22 +41,15 @@ function useQuiz () {
 
 
         if (currentPick.nextQuestion === '') {
-            // setIsLoading(true);
             
             setPhase("results");
-            
-            // // shows 'Loading' before results
-            // setTimeout(() => {
-            //     setPhase("results");
-            //     setIsLoading(false);
-            // }, 1200); 
         } else {
             setQuestionId(currentPick.nextQuestion);
         }        
     }
 
 
-    return {phase, setPhase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer, isLoading}
+    return {phase, setPhase, startQuiz, questionId, setQuestionId, shoeScore, setShoeScore, handleAnswer}
 }
 
 export default useQuiz

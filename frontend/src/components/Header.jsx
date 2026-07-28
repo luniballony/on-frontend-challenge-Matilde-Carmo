@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Header ({setPhase, startQuiz}) {
+function Header ({startQuiz}) {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,7 +14,6 @@ function Header ({setPhase, startQuiz}) {
                         <a href="/">
                             <button
                                 onClick={() => {
-                                    setPhase("start");
                                     setMenuOpen(false);
                                 }}>
                                 Home
@@ -23,7 +22,6 @@ function Header ({setPhase, startQuiz}) {
 
                         <a href="/quiz">     
                             <button onClick={() => {
-                                    setPhase("quiz");
                                     startQuiz();
                                     setMenuOpen(false);
                                 }}> 
