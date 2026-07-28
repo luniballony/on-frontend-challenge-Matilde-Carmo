@@ -3,8 +3,10 @@ function Start ({startQuiz}) {
         <div className="start-screen">
             <div className="home-info">
                 <h1>Take the quiz and try your first pair!</h1>
-                <button className="btn-start" onClick={startQuiz}>
-                        Try On Trial</button>
+                <a href="/quiz">
+                    <button className="btn-start" onClick={startQuiz}>
+                            Try On Trial</button>
+                </a>
                 <h3>30 Days risk free</h3>
             </div>
 
